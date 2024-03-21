@@ -10,9 +10,10 @@ jobs:
     steps:
       - uses: cycodelabs/cimon-action@v0
         with:
+          client-id: ${{ secrets.CIMON_CLIENT_ID }}
+          secret: ${{ secrets.CIMON_SECRET }}
           log-level: debug
-          client-id: ${{ secret.CIMON_CLIENT_ID }}
-          secret: ${{ secret.CIMON.SECRET }}
+
 
       - name: run
         run: curl https://www.google.com
