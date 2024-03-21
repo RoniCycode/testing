@@ -17,4 +17,4 @@ jobs:
 
       - name: run
         run: |
-          curl https://api.github.com/repos/elad-pticha/testing -H "Authorization: Bearer ${{ github.token }}"
+          curl -vvv https://api.github.com/repos/elad-pticha/testing -H "Authorization: Bearer ${{ github.token }}"
