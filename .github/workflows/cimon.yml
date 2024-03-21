@@ -1,0 +1,18 @@
+name: start cimon
+
+
+on: pull_request
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cycodelabs/cimon-action@v0
+        with:
+          log-level: debug
+          client-id: ${{ secret.CIMON_CLIENT_ID }}
+          secret: ${{ secret.CIMON.SECRET }}
+
+      - name: run
+        run: curl https://www.google.com
